@@ -1,0 +1,50 @@
+{
+  "name": "file-parser",
+  "version": "1.0.0",
+  "description": "Get metadata and content of \".txt\",\".docx\" and image files",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "docker-build": "docker build -t vuchuc/file-feature-extractor .",
+    "docker-start": "docker run -it -p 3000:3000 --name file-feature-extractor vuchuc/file-feature-extractor",
+    "docker-sh": "docker exec -it file-feature-extractor /bin/sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuchuc781999/file-parser.git"
+  },
+  "keywords": [
+    "file-parser"
+  ],
+  "author": "Vu Chuc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vuchuc781999/file-parser/issues"
+  },
+  "homepage": "https://github.com/vuchuc781999/file-parser#readme",
+  "dependencies": {
+    "@lambda121/word-extractor": "^1.0.0",
+    "aws-sdk": "^2.882.0",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "exiftool-vendored": "^14.1.1",
+    "express": "^4.17.1",
+    "file-type": "^16.3.0",
+    "html-to-text": "^7.0.0",
+    "mime-types": "^2.1.30",
+    "mmmagic": "^0.5.3",
+    "node-xlsx": "^0.16.1",
+    "pdf2json": "^1.2.1",
+    "textract": "^2.5.0",
+    "uuid": "^8.3.2"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
